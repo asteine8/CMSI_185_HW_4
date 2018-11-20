@@ -1,0 +1,1 @@
+This is a git repository for LMU's 2018 CMSI 185 class. Specificly for the HW#4 due on the 29th of November 2018
