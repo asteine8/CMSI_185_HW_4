@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang='en'>
+   <head>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name='description' content=''>
+      <meta name='author' content=''>
+      <link rel='icon' href='../../favicon.ico'>
+      <title>CMSI 185: Computer Programming</title>
+      <link href='../private/dist/css/bootstrap.min.css' rel='stylesheet'>            <!-- Bootstrap core CSS -->
+      <link href='../private/dist/css/starter-template.css' rel='stylesheet'>         <!-- Custom styles for this template -->
+      <link href='../private/dist/css/sticky-footer-navbar.css' rel='stylesheet'>     <!-- Custom styles for this template -->
+      <link href='../private/cmsipages.css' rel='stylesheet'>
+      <link rel ='shortcut icon'      href='Lion1.ico' />
+      <script type='text/javascript' src='../private/scriptsCMSIpages.js'></script>   <!-- Custom code for the menu bar -->
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
+        <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
+      <![endif]-->
+   </head>
+
+   <body>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<  This section is the header navigation menu bar.  It has the name of the place as a button which will
+<  return you to this page.  There two drop-downs which have links to other pages on the site, and a
+<  link button to the instructor's CV information that sort of serves as an "about" page.
+< ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <script type='text/javascript'>myBootstrapMenubar185();</script>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<  This is the course information section, with contacts, hours, units, and such like stuff.
+< ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <div class='container' style='margin-left: 3em; padding-top: 3em; padding-right: 3em'>
+         <div class='banner'>
+            <h1>CMSI 185: Homework Assignment #4</h1>
+         </div>
+
+         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         <     General Details of Homework assignment
+         < ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+         <h2>General Details</h2>
+         <h4>Due Date: December 7, 2017 [2017-12-07, Thursday of week 15]</h4>
+         <p>The following guidelines are expected for all homework submissions:</p>
+         <ul><li>All homework must be typed.  Homework which is not typed will be returned ungraded and will be
+                 subject to the late homework guidelines as set out on the syllabus page.  PLEASE DO NOT scribble
+                 something on lined paper and rip it out of your spiral notebook &mdash; hanging chads went out
+                 with the presidential election in 2000.</li>
+             <li>I don't care too much about what font you use or how large your margins are; however, you might
+                 want to check out a monospaced font for typing code, as it will be easy to see the indentations.</li>
+             <li>Speaking of indenting, PLEASE DON'T USE TABS TO INDENT YOUR CODE.  Tabs can often get interpreted
+                 differently by different computers and applications, and could make code that is nicely formatted
+                 on your computer look &quot;all over the map&quot; on my computer or printer.  USE SPACES INSTEAD.
+                 You can set up almost every modern text editor to insert spaces whenever you press the TAB key, or
+                 you can simply pound the spacebar.</li>
+             <li>Work with a partner.  This mimics an industry code development model called &quot;pair programming&quot;
+                 which is part of the Extreme Programming software development method.  Feel free to collaborate in
+                 your pairs as much as you want, preferably doing the entire assignment together.</li>
+             <li>DO NOT share your work between groups.  Doing so will count as plagiarism.  If you wish to discuss
+                 solutions with another group over coffee in the Lair, that's fine as long as it is kept at the
+                 conceptual level, but each group needs to turn in its own version of the solutions.</li>
+             <li>You only need to turn in one copy per group.</li>
+             <li>If you'd like to use the <a href='http://jsfiddle.net/'>jsfiddle</a> website to do your programs,
+                 that is great.  Simply save the program in jsfiddle as a shared fiddle, then copy and embed a link
+                 to the fiddle into your homework where the answer goes for that problem.  I'll use the link to go
+                 to YOUR fiddle and run the code.  To save your fiddles you'll need to sign up for an account&hellip;</li>
+         </ul>
+
+         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         <     Chapter four exercises
+         < ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+         <h2>Problems From Chapter 4</h2>
+            <li class='spacedlist'><span class='underline'>Ch   4,  #22</span>: Explain, in your own words, <em>as
+                precisely as possible</em>the behavior of this script:
+                <blockquote><pre>
+      var i = 0;
+      while( i < 10 ) {
+         continue;
+         i += 1;
+      }
+      alert( "All done" );
+                </pre></blockquote></li>
+            <li class='spacedlist'><span class='underline'>Ch   4,  #26</span>: One way to &quot;speed up&quot;
+                the prime number-testing script is as follows:<br/>
+                <ul><li>If <code>n</code> is divisible by 2, you know immediately that <code>n</code> is composite</li>
+                    <li>Otherwise, test the divisors 3, 5, 7, 9, 11, &hellip;, to the square root of <code>n</code></li>
+                </ul>
+                Why does this work?  Rewrite the script to use this improved algorithm.</li>
+            <li class='spacedlist'><span class='underline'>pg 126,  #1 </span>: Write a <code>for</code> statement
+                that alerts 10, then alerts 9, and so on, until a final alert of 0.</li>
+            <li class='spacedlist'><span class='underline'>pg 126,  #2 </span>: Write a little script that computes
+                the value of the product of the integers 1 through 20 (inclusive).  Use a <code>for</code>
+                statement.</li>
+            <li class='spacedlist'><span class='underline'>pg 126,  #3 </span>: What would happen if, in Figure
+                4.6, the value of the last object's <code>next</code> property were not <code>null</code> but
+                rather a reference to the first object in the chain?</li>
+            <li class='spacedlist'><span class='underline'>pg 126,  #4 </span>: In the multiplication table script,
+                the inner loop uses the variable <code>j</code> to iterate through the columns.  What would the
+                script have produced if the programmer had accidentally used the variable <code>i</code> for both
+                the outer and inner loop indices?  [Hint: be careful about array bounds.]</li>
+
+         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         <     Chapter five exercises
+         < ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+         <h2>Problems From Chapter 5</h2>
+            <li class='spacedlist'><span class='underline'>Ch   5,  #3 </span>: Write a function that returns the
+                average of all of the items in an array.  For example, <code>average( [4, 5, 7, 2] )</code> should
+                return 4.5.</li>
+            <li class='spacedlist'><span class='underline'>Ch   5,  #5 </span>: Write a function that accepts two
+                numbers and returns a random number between the two values.</li>
+            <li class='spacedlist'><span class='underline'>Ch   5,  #8 </span>: Write a function that returns the
+                number of occurrences of a given character in a string.  For example, given the string
+                <code>&quot;Rat-a-tat-tat&quot;</code> and the character <code>&quot;t&quot;</code>, your function
+                should return <code>5</code>.</li>
+            <li class='spacedlist'><span class='underline'>Ch   5,  #10</span>: Use the Wolfram Alpha decision
+                engine (<a hrep=''>http://www.wolframalpha.com/</a>) to determine why the original
+                <code>balanceAfter</code> function from this chapter gives troublesome results for negative numbers
+                of compounding periods.  Ask Wolfram Alpha to graph the function
+                <code>1000 * (1 + 0.05/n)<sup>10<code>n</code></sup></code> and explain what you are seeing for negative
+                values of <code>n</code>.</li>
+            <li class='spacedlist'><span class='underline'>Ch   5,  #11</span>: What is produced by the
+                <code>sum</code> function from this chapter when given an argument that is not an array?  Is this
+                worrisome?  Discuss whether or not the function should be rewritten to check for a non-array
+                argument.</li>
+            <li class='spacedlist'><span class='underline'>Ch   5,  #15</span>: Test the <code>isPrime</code>
+                function in a shell on the following arguments: <code>undefined</code>, <code>null</code>,
+                <code>false</code>, <code>true</code>, <code>&quot;4&quot;</code>, <code>&quot; 2 &quot;</code>,
+                <code>&quot; 2 &quot;</code>, and <code>[19]</code>.</li>
+
+         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         <     Chapter six exercises
+         < ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+         <h2>Problems From Chapter 6</h2>
+           <li class='spacedlist'><span class='underline'>Ch   6,  #25</span>: Create a web page with at least
+                three levels of nested elements, such that its overall structure looks like this:
+                <blockquote><pre>
+      &lt;div&gt;
+         &lt;div&gt;
+            &lt;div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+                </pre></blockquote>
+                Give each element a <code>click</code> handler that identifies, through an <code>alert</code>
+                dialog, the clicked-on element and whether or not the event is in the capturing or bubbling phase.
+                Open the web page and, before clicking on various elements, predict the sequence of
+                <code>alert</code> messages that you will see.  Open the same page and click around using different
+                web browsers as well, and determine which browsers have similar or different event behavior.  [Hint:
+                read carefully the section in your text book about bubbling and capturing so you understand what is
+                being asked of your program.]</li>
+            <li class='spacedlist'><span class='underline'>pg 206,  #3 </span>: Draw a complete tree diagram for the
+                temperature converter web page in Section 6.1.2.</li>
+
+         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         <     Implementation Exercises
+         < ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+         <h2>Implementation Exercises</h2>
+         <blockquote>
+         <p>These programming problems are designed to give you practice at creating <strong>algorithmic solutions
+            to some straightforward problems</strong>.  The intent is not to overload you with tons of homework;
+            rather, it is to help you practice the concepts you have learned in class about breaking the problem
+            down into parts, figuring out the algorithm for each part, writing the whole thing down, doing a desk
+            check, and coding it up and testing it with various inputs.  To that end, You may select any two of
+            these three problems.  If you would like to do all three, feel free to do so, of course.  I'll give
+            you one extra credit point for your correct solution.</p>
+         </blockquote>
+         <p><span class='underline'>Exercise 1</span>: Expand the tic-tac-toe game from your text book to do
+            a four-by-four game instead of three-by-three.  (Note: this sounds a lot harder than it is...)  The code
+            begins on page 254 of your book.</p>
+         <p><span class='underline'>Exercise 2 [part one of two parts]</span>:Ch   7,  #22: Write a function that
+            takes in a string and returns the reversal of the string.  For example:</p>
+            <blockquote><pre>
+      reversal( "" )          // returns ""  (the empty string)
+      reversal( "a" )         // returns "a"
+      reversal( "string" )    // returns "gnirts"
+            </pre></blockquote>
+         <p><span class='underline'>Exercise 2 [part two of two parts]</span>Ch   7,  #23: Next, build a web interface
+            to the string reversal function.  Your web page should have a single input box and a button labeled
+            <code>Reverse</code>.  Clicking the button should cause the text in the input box to be replaced with the
+            reverse of its current contents.  (Bonus: see how few lines of code you can use to accomplish this task.)</p>
+         <p><span class='underline'>Exercise 3</span>: Given a total monetary amount and set of coin denominations,
+            determine the smallest number of coins required to make the total amount.  For example, given the total
+            amount of $1.23 and the denominations 50, 25, 10, 5, and 1, the answer should be two-50, two-10 and
+            three-one coins.  If some denomination is provided which is unusable, such as a negative value, the
+            program should simply say "IMPOSSIBLE" for that denomination.  The program should be contained in a
+            web page, in which the user inputs an arbitrary amount of money (expressed as a non-negative, whole
+            number of cents) in one text box, followed by a sequence of coin denominations (distinct positive
+            integers) in the second text box.  The page must then display in its footer area the optimal way of
+            making change for the given amount using the given set of denominations.  If there is no way to make
+            the change, the program must output the message <code>IMPOSSIBLE</code>.</p>
+
+         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         <     Python exercises
+         < ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+         <h2>Python Programming Problems</h2>
+         <p>The following problems are from the book "Python for Everyone" by Cay Horstmann and Rance D. Necaise,
+            ISBN 978-1-118-62613-9.</p>
+         <p><span class='underline'>Exercise 4</span>: (PYTHON PROGRAMMING &mdash; text exsample 3.2, page 131)
+            Two circles may intersect at a single point, at two points, or at an unlimited number of points when
+            the two circles are coincident (on top of each other).  If the circles do NOT intersect, one circle may
+            be contained entirely within the other, or they may be completely separate.  Your task is to write a
+            program in Python that obtains the parameters for two circles and reports whether they intersect.  For
+            each circle, the inputs should be the X and Y coordinate (on a Cartesian grid) of the center, and the
+            radius of the circle.  The output should be one and only one of the possible configurations listed
+            above, as well as the distance between the two center points.  (Hint: the distance can be determined
+            by using the Pythagorean Theorem.)</p>
+         <p><span class='underline'>Exercise 5</span>: (PYTHON PROGRAMMING &mdash; Business P3.35) Calculating
+            the tip when you go to a restaurant is not difficult, but your restaurant wants to suggest a tip
+            according to the service diners receive.  Write a program in Python that calculates a tip according
+            to the diner's satisfaction as follows:
+            <ul><li>Ask for the diner's satisfaction level using values 1 (satisfied) to 3 (dissatisfied)</li>
+                <li>If the diner is totally satisfied (value 1), calculate a 20 percent tip</li>
+                <li>If the diner is satisfied (value 2), calculate a 15 percent tip</li>
+                <li>If the diner is totally dissatisfied (value 3), calculate a 10 percent tip</li>
+                <li>Report the satisfaction level, in words, and the tip, in dollars and cents</li>
+            </ul></p>
+         <p><span class='underline'>Exercise 6</span>: (PYTHON PROGRAMMING &mdash; Science P3.40) Sound level
+            <em>L</em> in units of decibel (dB) is calculated by<br /><em>L = 20 log<sub10</sub>( p / p<sub>0</sub> )</em>
+            where <em>p</em> is the sound pressure of the sound and <em>p<sub>0</sub></em> is a reference pressure
+            of 2 * 10<sup>-6</sup>.  The <em>p</em> values are given in &quot;Pascals&quot;, abbreviated by
+            &quot;Pa&quot;.  The following table gives some sample descriptions of certain sound levels:</p>
+            <table>
+               <tr><td width='10%'>1</td><td>Threshold of pain</td><td width='15%' style='text-align: right'>130 dB</td></tr>
+               <tr><td>2</td><td>Possible hearing damamge</td><td style='text-align: right'>120 dB</td></tr>
+               <tr><td>3</td><td>Jackhammer at 1 meter distance</td><td style='text-align: right'>100 dB</td></tr>
+               <tr><td>4</td><td>Traffic on a busy roadway at 10 meters distance</td><td style='text-align: right'>90 dB</td></tr>
+               <tr><td>5</td><td>Normal conversation</td><td style='text-align: right'>60 dB</td></tr>
+               <tr><td>6</td><td>Calm library</td><td style='text-align: right'>30 dB</td></tr>
+               <tr><td>7</td><td>Light leaf rustling sound</td><td style='text-align: right'>0 dB</td></tr>
+            </table>
+            <p>Write a Python program that reads a value and a unit, either dB or Pa, and then prints the closest
+               description from the table above.</p>
+         <p><span class='underline'>Exercise 7</span>: (PYTHON PROGRAMMING &mdash; Science P3.44) A mass,
+            <em>m</em> of 2 kilograms is attached to the end of a rope of length<br /><em>r</em> = 3 meters.  The mass
+            is whirled around at high speed.  The rope can withstand a maximum tension <em>T</em> of 60 Newtons
+            before it will snap.  Write a program that accepts a rotation speed <em>V</em> and determines whether
+            such a speed will cause the rope to break.  Use the formula <em>T = mV&sup2; / r</em> to calculate.</p>
+
+      </div>   <!-- end of "main" div for the page. -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<  This section is the footer content which has the copyright information and update time stamp.
+< ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <footer class='footer' style='height: 8.5em; padding-top: 5em;'>
+         <div class='container'>
+            <p class='text-muted' style='text-align: left; font-size: 50%;'>
+               Copyright (c) 2005-2018, B.J. Johnson and LMU<br />
+               Last updated Sunday, 2018-07-16, 19:14:23<br />
+               Images on this web may be borrowed from other sources for teaching purposes only.<br />
+               If I am using an image that you want me to remove, tell me and I'll take it down.<br />
+               Use of feminine pronouns should be inferred to apply to both genders.<br /><br /><br />
+            </p>
+         </div>
+      </footer>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<  This section is the script files; they are at the end so the page will load faster.
+< ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src='../private/dist/js/bootstrap.min.js'></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src='../../assets/js/ie10-viewport-bug-workaround.js'></script>
+   </body>
+</html>
