@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Coin Composition Calculator</title>
+        <style>
+            footer {
+                background: darkgrey;
+                display: block;
+
+                /* height: 180px; */
+                padding: 1px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 20px;
+                margin-top: 40px;
+            }
+            footer h3 {
+                margin-top: 10px;
+                margin-bottom: 25px;
+            }
+        </style>
+        <script src="script.js"></script>
+    </head>
+    <body onload="UpdateChange();">
+        <h1>Coin Composition Calculator</h1>
+        <p>Enter Monetary Value into Box Below</p>
+        <input id="MonetaryInput" onkeyup="UpdateChange();" />
+    </body>
+    <footer>
+        <h3>Most Efficent Way of Giving Change</h3>
+        <div id="Output"></div>
+    </footer>
+</html>
