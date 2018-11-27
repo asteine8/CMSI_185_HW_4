@@ -1,5 +1,5 @@
 
-let changeValues = [2000, 1000, 5000, 100, 50, 25, 10, 1]; // In cents
+let changeValues = [2000, 1000, 500, 100, 50, 25, 10, 1]; // In cents
 let valuesForEachChangeValue = new Array(changeValues.length);
 let MonetaryValueGood = true;
 
@@ -45,8 +45,11 @@ function UpdateFooter() {
     if (MonetaryValueGood) {
         let output = "";
         for (let i in valuesForEachChangeValue) {
-            if (valuesForEachChangeValue[i] > 0)
-                output += valuesForEachChangeValue[i] + " of denomination: $" + changeValues[i]/100 + "<br>";
+            if (valuesForEachChangeValue[i] > 0) {
+                output += valuesForEachChangeValue[i] + " of denomination: ";
+                output = output + ((changeValues[i]>=100) ? "$"+changeValues[i]/100 : changeValues[i]+"¢");
+                output += "<br>";
+            }
         }
         footerOutput.innerHTML = output;
     }
