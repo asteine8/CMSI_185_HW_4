@@ -19,6 +19,9 @@
                 margin-top: 14px;
                 margin-bottom: 25px;
             }
+            body p {
+                margin-bottom: 5px;
+            }
         </style>
         <script src="script.js"></script>
     </head>
@@ -26,6 +29,8 @@
         <h1>Coin Composition Calculator</h1>
         <p>Enter Monetary Value into Box Below</p>
         <input id="MonetaryInput" onkeyup="UpdateChange();" />
+        <p>Enter availible coin values in dollars in a space or comma seperated list below</p>
+        <input id="ChangeInput" onkeyup="UpdateChange();"/>
     </body>
     <footer>
         <h3>Most Efficent Way of Giving Change</h3>

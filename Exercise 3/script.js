@@ -16,8 +16,8 @@ function GetOptimizedChange(monetaryValue, changeValues) {
         let numThisChange = Math.floor(monetaryValue/changeValues[v]);
         monetaryValue -= numThisChange*changeValues[v];
         numEachChange[v] = numThisChange;
+        console.log(monetaryValue);
     }
-    console.log(monetaryValue);
     if (monetaryValue >= 1e-9) { // Remainder, value is not creatable
         return "Impossible";
     }
@@ -36,7 +36,17 @@ function UpdateChange() {
         valuesForEachChangeValue = GetOptimizedChange(parseFloat(MonetaryValue), changeValues);
         // console.log(valuesForEachChangeValue);
         if (valuesForEachChangeValue == "Impossible") MonetaryValueGood = false;
+        let inputChangeValues = document.getElementById("ChangeInput").value;
+
+        if (inputChangeValues.search(/[^0-9, .]/) !== -1 || inputChangeValues.length === 0) {
+            MonetaryValueGood = false;
+        }
+        else {
+            changeValues = inputChangeValues.split(/[ ,]+/).map(parseFloat);
+            changeValues = changeValues.map(function(x){ return ((Number.isNaN(x)) ? 0 : x*100); });
+        }
     }
+    console.log(changeValues);
     UpdateFooter();
 }
 
